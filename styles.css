@@ -75,14 +75,14 @@ body {
 .number {
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  background-image: url('https://github.com/xylitedge/BalloonLogic/blob/main/yellow.png'); /* Replace with yellow balloon image */
+  background-image: url('https://static.vecteezy.com/system/resources/previews/034/922/688/large_2x/ai-generated-yellow-balloon-free-png.png'); /* Replace with yellow balloon image */
   background-color: transparent;
 }
 
 .operator {
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  background-image: url('https://github.com/xylitedge/BalloonLogic/blob/main/red.png'); /* Replace with red balloon image */
+  background-image: url('https://as1.ftcdn.net/v2/jpg/10/74/62/34/1000_F_1074623470_hNJ0d5cEasQYKQ3fMjDOI2Jb8jsgf2yg.webp'); /* Replace with red balloon image */
   background-color: transparent;
   color: black; /* Operators in black */
 }
@@ -125,4 +125,3 @@ button {
 button:hover {
   background-color: lightgray;
 }
-
