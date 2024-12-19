@@ -75,7 +75,7 @@ body {
 .number {
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  background-image: url('https://via.placeholder.com/100x150/ffd700?text=%20'); /* Replace with yellow balloon image */
+  background-image: url('https://github.com/xylitedge/BalloonLogic/blob/main/yellow.png'); /* Replace with yellow balloon image */
   background-color: transparent;
 }
 
