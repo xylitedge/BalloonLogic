@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   overflow: hidden;
   background: linear-gradient(to bottom, #87ceeb, #ffffff);
   color: black;
@@ -18,28 +18,42 @@ body {
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(to bottom, #1e90ff, #87cefa);
+  text-align: center;
+}
+
+/* Game Title */
+#game-title {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  font-size: calc(3vw + 20px);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 /* Timer Display */
 #timer {
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 5%;
   font-size: calc(2vw + 14px);
   font-weight: bold;
   color: black;
-  z-index: 999; /* Ensure it is above all balloons */
+  z-index: 999;
 }
 
 /* Result Display */
 #result-display {
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 5%;
   font-size: calc(2vw + 14px);
   font-weight: bold;
   color: black;
-  z-index: 999; /* Ensure it is above all balloons */
+  z-index: 999;
 }
 
 /* Balloons */
@@ -48,33 +62,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(2vw + 10px); /* Responsive font size */
+  font-size: calc(2vw + 10px);
   color: black;
   cursor: pointer;
   transition: transform 0.2s;
   z-index: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }
 
 .number {
-  background-color: yellow;
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.6);
+  background-image: url('https://via.placeholder.com/100x150/ffd700?text=%20'); /* Replace with yellow balloon image */
+  background-color: transparent;
 }
 
 .operator {
-  background-color: red;
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+  background-image: url('https://via.placeholder.com/100x150/ff4500?text=%20'); /* Replace with red balloon image */
+  background-color: transparent;
+  color: black; /* Operators in black */
 }
 
 .frozen {
   opacity: 0.8; /* Slightly dim the balloon to indicate it's frozen */
   transform: scale(1.05); /* Slightly enlarge it for visual feedback */
-  pointer-events: none; /* Disable further interactions */
+  pointer-events: none;
 }
 
 /* Game Over Screen */
@@ -88,6 +104,7 @@ body {
   color: white;
   padding: 20px;
   border-radius: 10px;
+  z-index: 1000;
 }
 
 .hidden {
@@ -108,3 +125,4 @@ button {
 button:hover {
   background-color: lightgray;
 }
+
