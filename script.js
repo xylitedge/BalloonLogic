@@ -95,6 +95,12 @@ function spawnBalloons() {
 
         balloon.classList.add('frozen'); // Freeze the balloon
         balloon.style.transition = "none"; // Stop any transitions
+
+        // Remove the balloon after 5 seconds
+        setTimeout(() => {
+            balloon.remove();
+        }, 5000);
+
         if (balloon.classList.contains('number')) {
             selectedNumbers.push(parseInt(balloon.dataset.value));
         } else if (balloon.classList.contains('operator')) {
@@ -178,7 +184,7 @@ function updateTimerDisplay() {
 // End game with a specific message
 function endGame(timeout) {
     gameOver = true;
-    resultMessage.textContent = timeout ? 'Time Out! Try Again?' : 'Game Over!';
+    resultMessage.textContent = timeout ? 'Time Out! Pop the balloon within a 1 minute, Now Try Again?' : 'Nice Try';
     gameOverDiv.classList.remove('hidden');
 
     // Clear remaining balloons
@@ -189,7 +195,10 @@ function endGame(timeout) {
 }
 
 // Restart game
-restartButton.addEventListener('click', startGame);
+restartButton.addEventListener('click', () => {
+    clearInterval(inactivityTimer);
+    startGame();
+});
 
 // Start game on page load
 startGame();
