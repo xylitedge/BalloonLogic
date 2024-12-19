@@ -82,7 +82,7 @@ body {
 .operator {
   width: calc(8vw + 40px);
   height: calc(10vw + 50px);
-  background-image: url('https://via.placeholder.com/100x150/ff4500?text=%20'); /* Replace with red balloon image */
+  background-image: url('https://github.com/xylitedge/BalloonLogic/blob/main/red.png'); /* Replace with red balloon image */
   background-color: transparent;
   color: black; /* Operators in black */
 }
